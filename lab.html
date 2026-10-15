@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Online Learning Platform</title>
+</head>
+
+<body>
+    <p>Welcome to course management portal</p>
+
+    <h1>Course Categories</h1>
+
+    <ol>
+        <li>AIML</li>
+        <li>Operating System</li>
+        <li>Linux</li>
+        <li>Full Stack</li>
+    </ol>
+
+    <h1>Course Details</h1>
+
+    <table border="1">
+        <tr>
+            <th>Course Name</th>
+            <th>Instructor</th>
+            <th>Duration</th>
+            <th>Contact</th>
+        </tr>
+
+        <tr>
+            <td>AIML</td>
+            <td>Dr. Ramesh</td>
+            <td>30 hrs</td>
+            <td>9xxxxxxxxx</td>
+        </tr>
+
+        <tr>
+            <td>Operating System</td>
+            <td>Dr. B. Vijay Kumar</td>
+            <td>90 hrs</td>
+            <td>987456123</td>
+        </tr>
+
+        <tr>
+            <td>Linux</td>
+            <td>Dr. Yaswanth</td>
+            <td>50 hrs</td>
+            <td>654789123</td>
+        </tr>
+
+        <tr>
+            <td>Full Stack</td>
+            <td>Dr. Vani Sree</td>
+            <td>50 hrs</td>
+            <td>654789123</td>
+        </tr>
+    </table>
+
+    <h2>Enroll in a Course</h2>
+
+    <form id="enrollForm">
+        <input type="radio" name="course" value="AIML" required> AIML<br>
+        <input type="radio" name="course" value="Operating System"> Operating System<br>
+        <input type="radio" name="course" value="Linux"> Linux<br>
+        <input type="radio" name="course" value="Full Stack"> Full Stack<br><br>
+
+        <button type="submit">Enroll</button>
+    </form>
+
+    <p id="notification"></p>
+
+    <script>
+        document.getElementById("enrollForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            let course = document.querySelector('input[name="course"]:checked').value;
+
+            document.getElementById("notification").innerHTML =
+                "Enrollment Successful! You have enrolled in " + course + ".";
+        });
+    </script>
+
+
+</body>
+
+</html>
